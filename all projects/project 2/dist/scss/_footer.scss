@@ -1,0 +1,58 @@
+.footer {
+  background-color: $verydarkblackblue;
+  padding: 6.3rem;
+  border-radius: 0 8rem 0 0;
+  @include breakpointup(medium) {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  &__logo {
+    flex-grow: 1;
+
+    img {
+      width: 9rem;
+      height: 4rem;
+      margin-bottom: 4rem;
+      @include breakpointup(medium) {
+        width: 10rem;
+        height: 4.1rem;
+      }
+    }
+  }
+
+  &__links {
+    flex-grow: 1;
+    a {
+      color: $grayishblue;
+      display: block;
+      max-width: 11.5rem;
+      text-decoration: none;
+      font-weight: 300;
+      font-size: 1.6rem;
+      margin-bottom: 0.7rem;
+      @include breakpointup(medium) {
+        margin-bottom: 1.4rem;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+      &:nth-child(1) {
+        color: $white;
+        font-weight: 600;
+        margin-bottom: 2.4rem;
+        margin-top: 3.5rem;
+        font-size: 1.8rem;
+        @include breakpointup(medium) {
+          margin-top: 1rem;
+          margin-bottom: 3rem;
+        }
+      }
+    }
+    &:last-child {
+      flex-grow: 1.5;
+    }
+  }
+}

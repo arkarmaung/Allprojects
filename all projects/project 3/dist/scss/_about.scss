@@ -1,0 +1,39 @@
+.about {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(
+      to right,
+      rgba(56, 15, 61, 0.9),
+      rgba(56, 15, 61, 0.3)
+    ),
+    url("./images/pp.jfif") center top;
+  background-size: cover;
+
+  &__div {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: rgb(78, 78, 78);
+    overflow: hidden;
+    padding-bottom: 10vh;
+    h1 {
+      font-size: 3rem;
+      color: orange;
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__para {
+    padding-bottom: 2rem;
+    border-bottom: 2px solid orange;
+    h2 {
+      font-size: 2rem;
+      color: rgb(184, 113, 184);
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

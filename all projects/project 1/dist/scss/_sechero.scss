@@ -1,0 +1,52 @@
+.sechero {
+  background-color: $lightgrayishblue;
+  @include breakpointdown(medium) {
+    padding: 5.5rem 3rem 5.5rem 3rem;
+  }
+  @include breakpointup(medium) {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    color: $darkblue;
+    font-weight: 400;
+    @include breakpointup(medium) {
+      font-size: 4rem;
+    }
+  }
+  h3 {
+    font-size: 2rem;
+    color: $darkblue;
+    font-weight: 400;
+    @include breakpointup(medium) {
+      font-size: 2.5rem;
+    }
+  }
+  p {
+    font-size: 1.6rem;
+    color: $grayishblue;
+    @include breakpointup(medium) {
+      font-size: 1.8rem;
+    }
+  }
+  img {
+    @include breakpointup(medium) {
+      margin-bottom: 2rem;
+    }
+  }
+  &__grid {
+    padding-top: 2.5rem;
+    @include breakpointup(medium) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 2.5rem;
+      padding-top: 4rem;
+    }
+  }
+  &__sides {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}

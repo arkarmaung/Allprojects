@@ -1,0 +1,96 @@
+.footer {
+  background-color: rgb(28, 20, 65);
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  @include breakpointup(medium) {
+    padding-top: 4.6rem;
+    padding-bottom: 4.6rem;
+  }
+  &__logo {
+    img {
+      width: 13rem;
+      height: 2.2rem;
+      @include breakpointup(medium) {
+        width: 14.4rem;
+        height: 2.3rem;
+      }
+    }
+  }
+  &__icons {
+    margin-top: 2.2rem;
+    margin-bottom: 2.2rem;
+    a {
+      width: 2.2rem;
+      height: 2.2rem;
+
+      &:not(:last-child) {
+        margin-right: 1.4rem;
+      }
+      &:hover {
+        img {
+          filter: invert(71%) sepia(89%) saturate(3207%) hue-rotate(130deg)
+            brightness(95%) contrast(80%);
+        }
+      }
+    }
+  }
+  &__links {
+    margin-bottom: 2.5rem;
+    @include breakpointup(medium) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    a {
+      margin-top: 1.5rem;
+      text-decoration: none;
+      color: $verylightgray;
+      display: block;
+      &:hover {
+        color: rgb(8, 167, 69);
+      }
+    }
+  }
+  &__copy {
+    @include breakpointup(medium) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-around;
+    }
+    button {
+      @include breakpointdown(medium) {
+        width: 15.3rem;
+        height: 4rem;
+        padding: 0;
+        margin-bottom: 2.5rem;
+      }
+    }
+    p {
+      color: $verylightgray;
+      font-size: 1.6rem;
+      margin: 0;
+    }
+  }
+  &__grid {
+    @include breakpointup(medium) {
+      display: grid;
+      grid-template-columns: 1.5fr 3fr 1.5fr;
+    }
+  }
+
+  &__side1 {
+    @include breakpointup(medium) {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      align-items: center;
+    }
+  }
+  &__side2 {
+    @include breakpointup(medium) {
+    }
+  }
+  &__side3 {
+    @include breakpointup(medium) {
+    }
+  }
+}

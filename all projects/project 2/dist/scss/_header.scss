@@ -1,0 +1,200 @@
+.header {
+  background-color: $lightred;
+  background-image: url(./images/bg-pattern-intro.svg);
+  background-repeat: no-repeat;
+  background-size: 168rem;
+  background-position: -52rem -52rem;
+  border-radius: 0 0 0 10rem;
+  @include breakpointup(medium) {
+    background-size: 309rem;
+    background-position: -46rem -129rem;
+  }
+  &__nav {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+    @include breakpointup(medium) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+  &__logo {
+    img {
+      width: 7.3rem;
+      height: 3rem;
+      @include breakpointup(medium) {
+        width: 10.3rem;
+        height: 4.3rem;
+      }
+    }
+  }
+  &__menu {
+    width: 3rem;
+    height: 1.8rem;
+    span {
+      display: block;
+      width: 100%;
+      height: 0.4rem;
+      background-color: $white;
+      transform-origin: 0.2rem 0.2rem;
+      transition: all 400ms ease-in-out;
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  &__extra {
+    text-align: center;
+  }
+  &__para {
+    h1 {
+      font-size: 3.2rem;
+      color: $white;
+      @include breakpointup(medium) {
+        font-size: 6rem;
+      }
+    }
+    p {
+      font-size: 1.8rem;
+      color: $grayishblue;
+      margin-bottom: 4rem;
+      @include breakpointup(medium) {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  &__button {
+    padding-bottom: 13rem;
+  }
+  &__button1 {
+    cursor: pointer;
+    width: 12.2rem;
+    height: 4.3rem;
+    font-weight: 600;
+    border-radius: 10rem;
+    border: none;
+    background-color: $white;
+    color: $lightred;
+    margin-right: 1.5rem;
+    &:hover {
+      color: $white;
+      background-color: $verylightred;
+    }
+    @include breakpointup(medium) {
+      width: 14rem;
+      height: 5rem;
+      font-size: 1.6rem;
+    }
+  }
+  &__button2 {
+    cursor: pointer;
+    width: 12.2rem;
+    height: 4.3rem;
+    font-weight: 600;
+    border-radius: 10rem;
+    border: 0.1rem solid $grayishblue;
+    background-color: $lightred;
+    color: $grayishblue;
+    &:hover {
+      color: $lightred;
+      background-color: $white;
+    }
+    @include breakpointup(medium) {
+      width: 14rem;
+      height: 5rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__links {
+    padding: 0 6rem 0 6rem;
+    position: relative;
+    justify-self: flex-start;
+    flex-grow: 2;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $grayishblue;
+    ul {
+      li {
+        list-style-type: none;
+        display: inline-block;
+        margin-right: 3rem;
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+          color: $white;
+          .header__hidelinks {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  &__hidelinks {
+    display: none;
+    position: absolute;
+    width: 17rem;
+    min-height: 15rem;
+    background-color: $white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 3.3rem 2.5rem;
+
+    a {
+      color: $verydarkgrayishblue;
+      text-decoration: none;
+      padding: 0.5rem 0 0.5rem 0;
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__login {
+    button {
+      cursor: pointer;
+      width: 14rem;
+      height: 5rem;
+      font-weight: 600;
+      border-radius: 10rem;
+      border: none;
+      font-size: 1.6rem;
+    }
+  }
+  &__loginbut {
+    color: $grayishblue;
+    background-color: transparent;
+    &:hover {
+      color: $white;
+    }
+  }
+  &__signbut {
+    color: $verylightred;
+    background-color: $white;
+    &:hover {
+      background-color: $verylightred;
+      color: $white;
+    }
+  }
+}
+
+.open {
+  .header__menu {
+    span {
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.close {
+}

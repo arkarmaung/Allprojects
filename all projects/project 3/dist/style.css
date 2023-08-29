@@ -1,0 +1,255 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "Kaisei Tokumin", serif;
+  line-height: 1.3;
+  color: white;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding: 1.6rem;
+}
+
+.header__btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  width: 2.8rem;
+  height: 2rem;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.header__menu {
+  position: absolute;
+  width: 2.8rem;
+  height: 0.3rem;
+  background: white;
+  top: 0.5rem;
+  right: 0rem;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.header__menu::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: white;
+  top: -0.8rem;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.header__menu::after {
+  position: absolute;
+  content: "";
+  width: 2rem;
+  height: 100%;
+  background: white;
+  top: 0.8rem;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.header__menu.open {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  background: transparent;
+}
+
+.header__menu.open::before {
+  -webkit-transform: rotate(45deg) translate(5px, 8px);
+          transform: rotate(45deg) translate(5px, 8px);
+}
+
+.header__menu.open::after {
+  width: 2.8rem;
+  -webkit-transform: rotate(-45deg) translate(3px, -7px);
+          transform: rotate(-45deg) translate(3px, -7px);
+}
+
+.nav {
+  position: fixed;
+  z-index: 3;
+  width: 100vw;
+  visibility: hidden;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.nav.open {
+  visibility: visible;
+}
+
+.nav ul.menu-nav {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #525252;
+  list-style-type: none;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.nav ul.menu-nav.open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.nav ul li.menu-nav__item {
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.nav ul li.menu-nav__item a {
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.nav ul li.menu-nav__item a:hover {
+  color: orange;
+}
+
+.nav ul li.menu-nav__item.active > a {
+  color: orange;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+main .social {
+  position: fixed;
+  bottom: 2rem;
+  left: 1.6rem;
+}
+
+main .social__icons {
+  padding: 0.7rem;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+main .social__icons:hover {
+  color: orange;
+}
+
+.main {
+  height: 100%;
+  padding-top: 40vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(56, 15, 61, 0.9)), to(rgba(56, 15, 61, 0.3))), url("/images/pp.jfif") center top;
+  background: linear-gradient(to right, rgba(56, 15, 61, 0.9), rgba(56, 15, 61, 0.3)), url("/images/pp.jfif") center top;
+  background-size: cover;
+}
+
+.main h1 {
+  font-size: 5rem;
+  padding-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #380f3d;
+}
+
+.main h1 .last-name {
+  font-weight: 700;
+  color: orange;
+}
+
+.main h2 {
+  font-size: 2rem;
+}
+
+.footer {
+  font-size: 1.6rem;
+  position: fixed;
+  bottom: 0.7rem;
+  right: 1.6rem;
+  text-align: right;
+  padding: 1.5rem;
+  color: white;
+}
+
+.about {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(56, 15, 61, 0.9)), to(rgba(56, 15, 61, 0.3))), url("/images/pp.jfif") center top;
+  background: linear-gradient(to right, rgba(56, 15, 61, 0.9), rgba(56, 15, 61, 0.3)), url("/images/pp.jfif") center top;
+  background-size: cover;
+}
+
+.about__div {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: #4e4e4e;
+  overflow: hidden;
+  padding-bottom: 10vh;
+}
+
+.about__div h1 {
+  font-size: 3rem;
+  color: orange;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about__para {
+  padding-bottom: 2rem;
+  border-bottom: 2px solid orange;
+}
+
+.about__para h2 {
+  font-size: 2rem;
+  color: #b871b8;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

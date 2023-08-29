@@ -1,0 +1,79 @@
+.article {
+  background-color: $white;
+  @include breakpointdown(medium) {
+    padding: 5.5rem 3rem 5.5rem 3rem;
+  }
+  @include breakpointup(medium) {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  &__head {
+    text-align: center;
+    h2 {
+      font-size: 3rem;
+      color: $darkblue;
+      font-weight: 400;
+      @include breakpointup(small) {
+        text-align: left;
+      }
+      @include breakpointup(medium) {
+        font-size: 4rem;
+      }
+    }
+  }
+  &__grid {
+    @include breakpointup(medium) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 2.5rem;
+      padding-top: 4rem;
+    }
+  }
+  &__sides {
+    background-color: $verylightgray;
+    width: 100%;
+    margin-bottom: 5rem;
+
+    img {
+      height: 18.5rem;
+      width: 100%;
+      border-radius: 0.7rem;
+      @include breakpointup(small) {
+        width: 75%;
+        height: 30rem;
+      }
+      @include breakpointup(medium) {
+        width: 100%;
+        height: 20rem;
+      }
+    }
+    span {
+      font-size: 1.1rem;
+      @include breakpointup(medium) {
+        font-size: 1.2rem;
+      }
+    }
+    a {
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: $darkblue;
+      @include breakpointup(medium) {
+        font-size: 1.7rem;
+      }
+      &:hover {
+        color: hsl(175, 70%, 51%);
+      }
+    }
+    p {
+      padding: 0 2.5rem 0 2.5rem;
+      font-size: 1.4rem;
+      text-align: left;
+      color: $grayishblue;
+      @include breakpointup(medium) {
+        font-size: 1.5rem;
+        padding: 0 2rem 0 2rem;
+      }
+    }
+  }
+}
